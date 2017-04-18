@@ -134,7 +134,7 @@ hover = Hover(address=0x42, ts=4, reset=17)
 # Plays an instance of the C note. It uses the global variables created
 # to determine if each octave switch is on. If it is, it plays the note
 # in that respective octave.
-def playButton1(note):
+def playButton1():
 	global switch1
 	global switch2
 	global switch3
@@ -425,7 +425,7 @@ def checkPressedButtons():
 	SWITCH2.when_released = switch2_off
 	SWITCH3.when_pressed = switch3_on
 	SWITCH3.when_released = switch3_off
-	BUTTON1.when_pressed = playButton1(noteC)
+	BUTTON1.when_pressed = playButton1
 	BUTTON1.when_released = stopButton1
 	BUTTON2.when_pressed = playButton2
 	BUTTON2.when_released = stopButton2
