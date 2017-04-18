@@ -39,7 +39,9 @@ from Hover_library import Hover
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-# Assigning buttons to GPIO pins
+# Assigning buttons to GPIO pins. The parameter that is passed in when
+# creating a new instance of Button() is the pin number that the button
+# is connected to. The GPIO pin numbering system being used is BCM
 # Button 1 = C
 BUTTON1 = Button(27)
 # Button 2 = C#
@@ -78,6 +80,8 @@ SWITCH3 = Button(21)
 
 # Assigning LED to GPIO pins. This light will turn on
 # when the instrument is ready to be played
+# Once again, the parameter provided to create a new instance
+# of LED() is the pin number the LED is connected to.
 blueStart = LED(14)
 
 # Setting global boolean values. Each switch when set to "On"
