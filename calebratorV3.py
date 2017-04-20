@@ -40,24 +40,6 @@ from Hover_library import Hover
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-# Each of these values is the MIDI value for a specific note. All 12
-# values are notes in Octave 4. I'm using them as reference values
-# and if I want to get the notes in Octave 5 and 6, then I'll add 12
-# or 24 respectively to the already define values here to get that
-# note in the other octaves
-noteC = 48
-noteCS = 49
-noteD = 50
-noteDS = 51
-noteE = 52
-noteF = 53
-noteFS = 54
-noteG = 55
-noteGS = 56
-noteA = 57
-noteAS = 58
-noteB = 59
-
 # Assigning buttons to GPIO pins. The parameter that is passed in when
 # creating a new instance of Button() is the pin number that the button
 # is connected to. The GPIO pin numbering system being used is BCM
@@ -147,7 +129,7 @@ def playButton1():
 		
 	if (switch3 == 1):
 		fs.noteon(0, 72, 100)
-	
+
 # Stops the currently playing instance of the C note. Even though it
 # would be unclear what notes are currently playing, it seemed like a
 # safe bet to stop them all, even if they weren't.
